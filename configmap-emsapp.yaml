@@ -2,7 +2,6 @@ apiVersion: v1
 data:
   jdbc.properties: |
     # Common Settings
-    jpa.database=MYSQL
     DRIVERCLASSNAME=com.mysql.jdbc.Driver
     DIALECT=org.hibernate.dialect.MySQLDialect
     
