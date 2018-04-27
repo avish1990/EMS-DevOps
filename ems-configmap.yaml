@@ -9,7 +9,7 @@ data:
 kind: ConfigMap
 metadata:
   creationTimestamp: 2018-04-26T14:06:13Z
-  name: dataprop
+  name: dbsettings
   namespace: emsapp
   resourceVersion: "832071"
   selfLink: /api/v1/namespaces/development/configmaps/dataprop
