@@ -1,12 +1,10 @@
 apiVersion: v1
-data:
-  jdbc.properties: |
-    # Common Settings
-    DRIVERCLASSNAME=com.mysql.jdbc.Driver
-    DIALECT=org.hibernate.dialect.MySQLDialect
-    
 kind: ConfigMap
 metadata:
   name: dbsettings
   namespace: emsapp
-  
+
+data:
+    # Common Settings
+        DRIVERCLASSNAME: com.mysql.jdbc.Driver
+        DIALECT: org.hibernate.dialect.MySQLDialect
