@@ -1,0 +1,47 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ems-deploy
+  namespace: emsapp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: emsapp
+    spec:
+        containers:
+        - name: emsapp
+          image: emsapp:1.0
+          imagePullPolicy: Never
+          command: [ "/bin/sh", "-c" ]
+          args: [ "bin/catalina.sh start && tail -f /dev/null" ]
+          env:
+           - name: DATABASEURL
+             valueFrom:
+               secretKeyRef:
+                       name: dbsecret
+                       key: DATABASEURL
+           - name: DBUSERNAME
+             valueFrom:
+               secretKeyRef:
+                       name: dbsecret
+                       key: DBUSERNAME
+           - name: DBPASSWORD
+             valueFrom:
+               secretKeyRef:
+                       name: dbsecret
+                       key: DBPASSWORD
+           - name: DIALECT
+             valueFrom:
+               configMapKeyRef:
+                       name: dbsettings
+                       key: DIALECT
+           - name: DRIVERCLASSNAME
+             valueFrom:
+               configMapKeyRef:
+                       name: dbsettings
+                       key: DRIVERCLASSNAME
+          ports:
+          - name: http
+            containerPort: 9020
