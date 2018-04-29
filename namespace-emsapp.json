@@ -1,0 +1,10 @@
+{
+          "kind": "Namespace",
+            "apiVersion": "v1",
+              "metadata": {
+                          "name": "emsapp",
+                              "labels": {
+                                            "name": "emsapp"
+                                                }
+                                                  }
+}
