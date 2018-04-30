@@ -1,0 +1,11 @@
+#Configure Docker Jenkins plugin when runnning Jenkins inside Dockers.
+
+1. Install Docker plugin from manage Jenkins.
+2. GO to: Manage Jenkins > Configure System > "Add a new cloud" at the bottom > Insert the Docker URI: tcp://<HostIP>:2375
+
+# To configure Docker URI on CentOS 7+
+ Edit file : "/usr/lib/systemd/system/docker.service"
+ Modify ExecStart with customized Port and IP. See below: 
+ 'ExecStart=/usr/bin/dockerd -H tcp://10.0.1.2:4243 -H unix:///var/run/docker.sock'
+ systemctl daemon-reload
+ systemctl restart docker
