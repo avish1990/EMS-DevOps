@@ -1,3 +1,3 @@
 FROM tomcat:8.0
-ADD emswar-24.war /usr/local/tomcat/webapps/
+ADD emswar-25.war /usr/local/tomcat/webapps/
 RUN mv /usr/local/tomcat/webapps/*.war /usr/local/tomcat/webapps/myapp.war
