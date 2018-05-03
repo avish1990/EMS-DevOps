@@ -1,2 +1,2 @@
 FROM tomcat:8.0
-ADD emswar-14.war /usr/local/tomcat/webapps/
+ADD emswar-15.war /usr/local/tomcat/webapps/
