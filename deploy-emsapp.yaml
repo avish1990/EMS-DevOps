@@ -19,8 +19,8 @@ spec:
           env:
            - name: DATABASEURL
              valueFrom:
-               secretKeyRef:
-                       name: dbsecret
+               configMapKeyRef:
+                       name: dbsettings
                        key: DATABASEURL
            - name: DBUSERNAME
              valueFrom:
