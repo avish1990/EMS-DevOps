@@ -12,7 +12,7 @@ spec:
     spec:
         containers:
         - name: emsapp
-          image: avish1990/ems:5dc82e829aec32e7b0f577cb47426d4e570423eb-1.22
+          image: avish1990/ems:ab8d0d902476900d74fef641948231beb67ce5d4-1.23
           imagePullPolicy: IfNotPresent
           command: [ "/bin/sh", "-c" ]
           args: [ "bin/catalina.sh start && tail -f /dev/null" ]
