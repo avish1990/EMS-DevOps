@@ -8,3 +8,4 @@ data:
     # Common Settings
         DRIVERCLASSNAME: com.mysql.jdbc.Driver
         DIALECT: org.hibernate.dialect.MySQLDialect
+        DATABASEURL: jdbc:mysql://172.27.59.51:3306/test
