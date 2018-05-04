@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: emsapp-ingress
+    namespace: emsapp
+        #annotations:
+        #        kubernetes.io/ingress.global-static-ip-name: nginx1-static-ip
+spec:
+   backend:
+      serviceName: emsapp-svc
+      servicePort: 8080
