@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus
+  namespace: emsapp
+data:
+  prometheus.yml: |-
+    scrape_configs:
+      - job_name: 'prometheus'
+        scrape_interval: 5s
+        static_configs:
+                - targets: ['localhost:9090']
+
+
