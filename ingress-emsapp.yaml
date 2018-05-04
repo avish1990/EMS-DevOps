@@ -3,8 +3,7 @@ kind: Ingress
 metadata:
     name: emsapp-ingress
     namespace: emsapp
-        #annotations:
-        #        kubernetes.io/ingress.global-static-ip-name: nginx1-static-ip
+        
 spec:
    backend:
       serviceName: emsapp-svc
