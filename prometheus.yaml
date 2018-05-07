@@ -12,3 +12,8 @@ data:
                 - targets: ['localhost:9090']
 
 
+      - job_name: 'emsapp'
+        scrape_interval: 5s
+        static_configs:
+                - targets: ['10.32.0.28:9100']
+
