@@ -21,7 +21,7 @@ spec:
           image: avish1990/ems:c30e91e605cd1f993dd8349d30c0b2091fcaa206-1.32
           imagePullPolicy: IfNotPresent
           command: [ "/bin/sh", "-c" ]
-          args: [ "bin/catalina.sh start && tail -f /dev/null" ]
+          args: [ "bin/catalina.sh start && /opt/prometheus_exporters/node_exporter &" ]
           env:
            - name: DATABASEURL
              valueFrom:
