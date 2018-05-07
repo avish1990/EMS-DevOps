@@ -1,10 +1,21 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-    name: emsapp-ingress
-    namespace: emsapp
-        
+        name: emsapp-ingress
+        namespace: emsapp
 spec:
-   backend:
-      serviceName: emsapp-svc
-      servicePort: 8080
+     rules:
+     - http:
+         paths:
+         - path: /
+           backend:
+                serviceName: emsapp-svc
+                servicePort: 8080
+         - path: /prom
+           backend:
+                serviceName: prometheus
+                servicePort: 9090
+         - path: /grafana
+           backend:
+                serviceName: grafana
+                servicePort: 80
