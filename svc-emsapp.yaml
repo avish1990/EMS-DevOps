@@ -14,3 +14,8 @@ spec:
     name: http
     targetPort: 8080
     protocol: TCP
+  
+  - port: 9100
+    name: metrics
+    targetPort: 9100
+    protocol: TCP
