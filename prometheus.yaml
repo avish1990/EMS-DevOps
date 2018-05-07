@@ -15,5 +15,5 @@ data:
       - job_name: 'emsapp'
         scrape_interval: 5s
         static_configs:
-                - targets: ['10.32.0.28:9100']
+                - targets: ['emsapp-svc:9100']
 
