@@ -9,8 +9,9 @@ metadata:
           #nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
      rules:
-     #- http:
-     #    paths:
+     - host: <domain.xyz>
+       http:
+         paths:
      #    - path: /prometheus/graph
      #      backend:
      #           serviceName: prometheus
