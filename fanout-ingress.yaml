@@ -3,23 +3,23 @@ kind: Ingress
 metadata:
         name: emsapp-ingress
         namespace: emsapp
-        annotations:
+        #annotations:
           #nginx.ingress.kubernetes.io/app-root: /myapp
           #kubernetes.io/ingress.global-static-ip-name:
-          nginx.ingress.kubernetes.io/rewrite-target: /
+          #nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
      rules:
-     - http:
-         paths:
-         - path: /prometheus/graph
-           backend:
-                serviceName: prometheus
-                servicePort: 9090
-         - path: /grafana/
+     #- http:
+     #    paths:
+     #    - path: /prometheus/graph
+     #      backend:
+     #           serviceName: prometheus
+     #           servicePort: 9090
+         - path: /*
            backend:
                 serviceName: grafana
                 servicePort: 80
-         - path: /myapp/*
-           backend:
-                serviceName: emsapp-svc
-                servicePort: 8080
+     #    - path: /myapp/*
+     #      backend:
+     #           serviceName: emsapp-svc
+     #           servicePort: 8080
