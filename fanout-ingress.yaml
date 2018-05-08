@@ -20,7 +20,7 @@ spec:
            backend:
                 serviceName: grafana
                 servicePort: 80
-     #    - path: /myapp/*
-     #      backend:
-     #           serviceName: emsapp-svc
-     #           servicePort: 8080
+         - path: /myapp/*
+           backend:
+                serviceName: emsapp-svc
+                servicePort: 8080
