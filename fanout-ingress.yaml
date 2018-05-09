@@ -3,9 +3,9 @@ kind: Ingress
 metadata:
         name: emsapp-ingress
         namespace: emsapp
-        #annotations:
+        annotations:
           #nginx.ingress.kubernetes.io/app-root: /myapp
-          #kubernetes.io/ingress.global-static-ip-name:
+          kubernetes.io/ingress.global-static-ip-name: kube
           #nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
      rules:
