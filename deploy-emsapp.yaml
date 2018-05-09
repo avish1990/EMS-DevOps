@@ -18,7 +18,7 @@ spec:
     spec:
         containers:
         - name: emsapp
-          image: avish1990/ems:c30e91e605cd1f993dd8349d30c0b2091fcaa206-1.36
+          image: avish1990/ems:f80546f53fc9c5fb4b7a5a2411dbb48b0e13f4cb-1.37
           imagePullPolicy: IfNotPresent
           command: [ "/bin/sh", "-c" ]
           args: [ "bin/catalina.sh start && /opt/prometheus_exporters/node_exporter" ]
