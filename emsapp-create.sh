@@ -1,5 +1,5 @@
 #gcloud container clusters create <clustername> --network <> --subnetwork <>
-#sleep 60
+
 #gcloud container clusters get-credentials <clustername> --zone <> --project <projectname>
 
 kubectl apply -f https://raw.githubusercontent.com/avish1990/EMS-DevOps/master/namespace-emsapp.json
